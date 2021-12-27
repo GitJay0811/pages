@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width:768px){
+	#amID{
+		display:flex;
+		flex-direction:column;
+		margin-bottom:180px;
+	}
+	
+	/*#photoID{
+		display:flex;
+		flex-direction:column;
+	}*/
+}
+@media screen and (max-width:580px){
+	body{
+		/*width:100vw;*/
+		max-width：580px;
+	}
+	#amID{
+		width:100%;
+		display:flex;
+		flex-direction:column;
+		margin-bottom:180px;
+	}
+	#amID .amLeft .amLeft{
+		text-align:left;
+	}
+	#amID .amRight{
+	}
+	#amID .amRight .amRightTextOne{
+		width:80%;
+		text-align:center;
+		padding:0 20px;
+	}
+	#amID .amRight .amRightTextTwo{
+		width:90%;
+		
+	}
+	#amID .amRight .amRightTextOne{
+		width:80%;
+	}
+	#amID .amRight .amRightTextOne{
+		width:80%;
+	}
+	/*#photoID{
+		display:flex;
+		flex-direction:column;
+	}*/
+}

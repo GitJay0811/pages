@@ -1,0 +1,18 @@
+16px = 1rem
+<kbd></kbd>:表達需要使用者用鍵盤按下某按鍵
+
+“ const ”— 一般使用在識別值(identifier)不會被重新指定值。
+“let”— 一般使用在變數(variable)可能會被重新指定值。
+
+有transition就會有transitionend事件
+
+(function(){
+
+})()
+
+classList.add 加css
+classList.remove 移除css
+
+data-* 例如data-key="65"
+
+forEach

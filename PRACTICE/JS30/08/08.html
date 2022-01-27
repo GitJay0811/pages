@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS08</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+        ; (function () {
+            let canvas = document.querySelector('#draw');
+            canvas.width = window.innerWidth;
+            canvas.heigh = window.innerHeight;
+            let ctx = canvas.getContext('2d');
+            let colorDeg =0 ,lineW = 50 ,direction = -1;
+            ctx.strokeStyle = `hsl(${colorDeg},100%,50%)`;
+            ctx.lineWidth = lineW;
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            let x=0,y=0;
+
+            let drawing = false;
+
+            canvas.addEventListener('mousedown', e => {
+                drawing = true;
+                [x,y] = [e.offsetX,e.offsetY];
+            });
+            canvas.addEventListener('mousemove', e => {
+                if(!drawing) return;
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.lineTo(e.offsetX,e.offsetY);
+                [x,y] = [e.offsetX,e.offsetY];
+                colorDeg = colorDeg < 360 ? colorDeg+1 : 0;
+                ctx.strokeStyle = `hsl(${colorDeg},100%,50%)`;
+
+                if(lineW < 1 || lineW > 50){
+                    direction *= -1;
+                }
+                lineW +=  direction;
+                ctx.lineWidth = lineW;
+                ctx.stroke();
+            });
+            canvas.addEventListener('mouseup', () => {
+                drawing = false;
+            });
+            canvas.addEventListener('mouseleave', () => {
+                drawing = false;
+            });
+        })()
+    </script>
+</body>
+
+</html>

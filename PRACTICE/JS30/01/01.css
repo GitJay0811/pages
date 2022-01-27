@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+html{
+    font-size: 10px;
+    background: url("/PRACTICE/JS30/01/img/bg.jpg") bottom center;
+    background-size: cover;
+   
+}
+.keys{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-height: 100vh;
+}
+.key{
+    background: rgba(0,0,0,0.4);
+    width: 10rem;
+    border: .4rem solid black;
+    border-radius: .5rem;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    text-shadow: 0 0 .5rem black;
+    transition: all .07s ease;
+}
+kbd{
+    display: block;
+    color: #FFF;
+}
+.sound{
+    color: #ffc600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }

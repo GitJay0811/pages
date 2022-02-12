@@ -91,7 +91,9 @@ body::after{
 	color:#E8E8E8;
 	
 }
-
+img:hover{
+	filter:brightness(.6);
+}
 /*===================================*/
 
 

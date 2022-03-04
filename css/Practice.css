@@ -74,6 +74,8 @@ body::after{
 	border: 3px solid #A9A9A9;
 	border-radius: 1px;
 	padding: 30px 0px;
+	position: relative;
+	
 }
 .table tr td a{
 	font-family: 'Kalam', cursive;
@@ -86,6 +88,7 @@ body::after{
 	justify-content: center;
 	margin: 10px 0;
 	text-decoration: none;
+	
 }
 .table tr td:first-child{
 	width: 40%;
@@ -109,7 +112,20 @@ body::after{
 footer{
 	margin-top:-10px;
 }
-
+#point{
+	position: absolute;
+	top:0;
+	right: 10px;
+	display: inline-block;
+	width: 5px;
+	height: 10px;
+	z-index: 999;
+}
+.fa-star{
+	color: yellow; 
+	font-size: 12px; 
+	transform: translate(-10px,-5px);
+}
 /*===================================*/
 
 
